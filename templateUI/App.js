@@ -1,37 +1,36 @@
-import {Text, View} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native'
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { Login,Signup,Welcome } from './screens';
+import { Login, Signup, Welcome, Splash } from './src/screens';
 
 const Stack = createNativeStackNavigator()
-export default function App(){
+export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator 
-        initialRouteName = 'Welcome'
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false
+        }}
       >
+
+        <Stack.Screen
+          name='Splash'
+          component={Splash}
+        />
+
         <Stack.Screen
           name='Welcome'
-          component = {Welcome}
-          options={{
-            headerShown: false
-          }}
+          component={Welcome}
         />
-        
+
         <Stack.Screen
           name='Login'
-          component = {Login}
-          options={{
-            headerShown: false
-          }}
+          component={Login}
         />
 
         <Stack.Screen
           name='Signup'
-          component = {Signup}
-          options={{
-            headerShown: false
-          }}
+          component={Signup}
         />
 
       </Stack.Navigator>

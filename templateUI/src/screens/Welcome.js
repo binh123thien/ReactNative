@@ -1,16 +1,14 @@
-import { View } from 'react-native';
-import React from 'react';
-import LinearGradient from 'react-native-linear-gradient';
-import COLORS from '../constants/colors';
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
 const Welcome = () => {
   return (
-    <LinearGradient colors={[COLORS.blackground, COLORS.title]} style={{ flex: 1 }}>
-      <View style={{ flex: 1, backgroundColor: COLORS.background }}>
-        {/* Nội dung khác trong thành phần */}
-      </View>
-    </LinearGradient>
-  );
-};
+    <View>
+      <Text>Welcome</Text>
+    </View>
+  )
+}
 
-export default Welcome;
+export default Welcome
+
+const styles = StyleSheet.create({})
